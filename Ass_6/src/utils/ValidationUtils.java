@@ -13,25 +13,25 @@ public class ValidationUtils {
 		MIN_CHAR = 5;
 	}
 	
-	public static void checkEmailLength(String email) throws Exception {
+	public static void checkEmailLength(String email) throws EmailMismatchException {
 		if(email.length() < MIN_CHAR)
 			throw new EmailMismatchException("Email too short! Minimum 5 chars.");
 		if(email.length() > MAX_CHAR)
 			throw new EmailMismatchException("Email too long! Maximum 10 chars.");
 	}
 	
-	public static void checkAtChar(String email) throws Exception {
+	public static void checkAtChar(String email) throws EmailMismatchException {
 		if(!email.contains("@"))
 			throw new EmailMismatchException("Email must contain '@'");
 	}
 	
-	public static void checkDeptId(String deptId) throws Exception {
+	public static void checkDeptId(String deptId) throws DeptIdMismatchException {
 		if(!deptId.matches("Sales|HR|RND|Marketing")) throw new
 			DeptIdMismatchException("Invalid Department ID!"); 
 		}
 	 
 	
-	public static void checkBasicSalary(double basic) throws Exception {
+	public static void checkBasicSalary(double basic) throws SalaryMismatchException {
 		if(basic % 1000 !=0 )
 			throw new SalaryMismatchException("Salary must be in the the multiples of 1000.");
 	}
