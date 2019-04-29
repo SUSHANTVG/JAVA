@@ -29,22 +29,22 @@ public class TestCustomer {
 				try {
 					switch (ch) {
 						case 1:
-								System.out.println("Enter email:");
-								email = x.next();
-								checkEmailLength(email);
-								checkDuplicateEmail(email, clist);
-								System.out.println("Enter password:");
-								password = x.next();
-								checkPassword(password);
-								System.out.println("Enter registration amount:");
-								regAmount = x.nextDouble();
-								checkRegAmount(regAmount);
-								System.out.println("Enter registration date:");
-								date = x.next();
-								regDate = checkRegDate(date);
-								cs = new Customer(email, password, regAmount, regDate);
-								clist.add(cs);
-								System.out.println("Registered successfully!");
+							System.out.println("Enter email:");
+							email = x.next();
+							checkEmailLength(email);
+							checkDuplicateEmail(email, clist);
+							System.out.println("Enter password:");
+							password = x.next();
+							checkPassword(password);
+							System.out.println("Enter registration amount:");
+							regAmount = x.nextDouble();
+							checkRegAmount(regAmount);
+							System.out.println("Enter registration date:");
+							date = x.next();
+							regDate = checkRegDate(date);
+							cs = new Customer(email, password, regAmount, regDate);
+							clist.add(cs);
+							System.out.println("Registered successfully!");
 							break;
 						case 2:
 							for(Customer cc : clist)
