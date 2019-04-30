@@ -50,7 +50,6 @@ public class ValidationRules {
 	public static boolean checkDuplicateEmail(String email, ArrayList<Customer> cs) throws CustomerHandlingException {
 		if(cs.contains(new Customer(email)))
 			throw new CustomerHandlingException("Email already exists!");
-		else
-			return false;
+		return true;
 	}
 }
