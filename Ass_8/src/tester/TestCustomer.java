@@ -59,7 +59,7 @@ public class TestCustomer {
 				}catch (Exception e) {
 					System.out.println(e.getMessage());
 				}
-			}while(ch!=9);
+			}while(ch!=3);
 		}catch (Exception e) {
 			System.out.println(e.getMessage());
 		}finally {
